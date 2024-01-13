@@ -1,0 +1,74 @@
+<html>
+
+<head>
+
+<body>
+    <select id="select-one-gradebook">
+        <option selected value="GRADEBOOK">Gradebook</option>
+        <option value="GRADEBOOK_OTHER">Other Gradebook</option>
+    </select>
+
+    <button>Import</button>
+
+    <select id="select-one-export">
+        <option selected value="EXPORT">Export</option>
+        <option value="IMPORT">Import</option>
+    </select>
+
+    <button>Configure</button> <br />
+
+    <form id="submit-grade">
+        <h3 for="text-fields-studentnames">Student Names</h3>
+        <input id="text-fields-studentnames" placeholder="Search Students" /><br />
+        <h3 for="text-fields-assignmentnames">Assignment Names</h3>
+        <input id="text-fields-assignmentnames" placeholder="Search Assignments" /><br />
+    </form>
+
+    <button type="submit" form="submit-grade" value="apply_filter">Apply Filters</button> <br /><br />
+
+    <table border="1" width="100%" align="center">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>A1 SETUP <br>Out of 100</th>
+                <th>A2 HTML <br>Out of 100</th>
+                <th>A3 CSS <br>Out of 100</th>
+                <th>A4 BOOSTRAP <br>Out of 100</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>98</td>
+                <td>89</td>
+                <td>85</td>
+                <td><input type="number" min="0" max="100"></td>
+            </tr>
+            <tr>
+                <td>Kert</td>
+                <td><input type="number" min="0" max="100"></td>
+                <td>89</td>
+                <td>75</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Vincent</td>
+                <td>98</td>
+                <td>82</td>
+                <td><input type="number" min="0" max="100"></td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>98</td>
+                <td><input type="number" min="0" max="100"></td>
+                <td>81</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</head>
+
+</html>

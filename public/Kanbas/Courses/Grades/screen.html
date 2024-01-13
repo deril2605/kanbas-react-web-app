@@ -1,0 +1,144 @@
+<html>
+
+<head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <ul>
+                        <li><a href="/Kanbas/Account/Navigation/index.html">
+                                Account</a></li>
+                        <li>
+                            <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                        </li>
+                        <li>
+                            <a href="/Kanbas/Calendar/index.html">Calendar</a>
+                        </li>
+                        <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
+                        <li><a href="/Kanbas/History/index.html">History</a></li>
+                        <li><a href="/Kanbas/Studio/index.html">Studio</a></li>
+                        <li><a href="/Kanbas/Commons/index.html">Commons</a></li>
+                        <li><a href="/Kanbas/Help/index.html">Help</a></li>
+                    </ul>
+                </td>
+                <td valign="top">
+                    <ul>
+                        <li>
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                Home</a>
+                        </li>
+                        <li><a href="/Kanbas/Courses/Modules/screen.html">
+                                Modules</a></li>
+                        <li><a href="/Kanbas/Courses/Piazza/index.html">
+                                Piazza</a></li>
+                        <li><a href="/Kanbas/Courses/Zoom_Meetings/index.html">
+                                Zoom Meetings</a></li>
+                        <li><a href="/Kanbas/Courses/Assignments/screen.html">
+                                Assignments</a></li>
+                        <li><a href="/Kanbas/Courses/Quizzes/screen.html">
+                                Quizzes</a></li>
+                        <li><a href="/Kanbas/Courses/Grades/screen.html">
+                                Grades</a></li>
+                        <li><a href="/Kanbas/Courses/People/index.html">
+                                People</a></li>
+                        <li><a href="/Kanbas/Courses/Panopto_Video/index.html">
+                                Panopto Video</a></li>
+                        <li><a href="/Kanbas/Courses/Discussions/index.html">
+                                Discussions</a></li>
+                        <li><a href="/Kanbas/Courses/Announcements/index.html">
+                                Announcements</a></li>
+                        <li><a href="/Kanbas/Courses/Pages/index.html">
+                                Pages</a></li>
+                        <li><a href="/Kanbas/Courses/Files/screen.html">
+                                Files</a></li>
+                        <li><a href="/Kanbas/Courses/Rubrics/index.html">
+                                Rubrics</a></li>
+                        <li><a href="/Kanbas/Courses/Outcomes/index.html">
+                                Outcomes</a></li>
+                        <li><a href="/Kanbas/Courses/Collaborations/index.html">
+                                Collaborations</a></li>
+                        <li><a href="/Kanbas/Courses/Syllabus/index.html">
+                                Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/screen.html">
+                                Settings</a></li>
+
+                    </ul>
+                </td>
+                <td valign="top">
+                    <select id="select-one-gradebook">
+                        <option selected value="GRADEBOOK">Gradebook</option>
+                        <option value="GRADEBOOK_OTHER">Other Gradebook</option>
+                    </select>
+
+                    <button>Import</button>
+
+                    <select id="select-one-export">
+                        <option selected value="EXPORT">Export</option>
+                        <option value="IMPORT">Import</option>
+                    </select>
+
+                    <button>Configure</button> <br />
+
+                    <form id="submit-grade">
+                        <h3 for="text-fields-studentnames">Student Names</h3>
+                        <input id="text-fields-studentnames" placeholder="Search Students" /><br />
+                        <h3 for="text-fields-assignmentnames">Assignment Names</h3>
+                        <input id="text-fields-assignmentnames" placeholder="Search Assignments" /><br />
+                    </form>
+
+                    <button type="submit" form="submit-grade" value="apply_filter">Apply Filters</button> <br /><br />
+                    <table border="1" width="100%" align="center">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>A1 SETUP <br>Out of 100</th>
+                                <th>A2 HTML <br>Out of 100</th>
+                                <th>A3 CSS <br>Out of 100</th>
+                                <th>A4 BOOSTRAP <br>Out of 100</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice</td>
+                                <td>98</td>
+                                <td>89</td>
+                                <td>85</td>
+                                <td><input type="number" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>Kert</td>
+                                <td><input type="number" min="0" max="100"></td>
+                                <td>89</td>
+                                <td>75</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Vincent</td>
+                                <td>98</td>
+                                <td>82</td>
+                                <td><input type="number" min="0" max="100"></td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>98</td>
+                                <td><input type="number" min="0" max="100"></td>
+                                <td>81</td>
+                                <td>90</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</head>
+
+</html>
