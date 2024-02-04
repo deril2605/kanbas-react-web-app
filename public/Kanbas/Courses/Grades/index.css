@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+}
+
+.wd-grades-buttons {
+    align-self: end;
+}
+
+.main-container h5,
+h6 {
+    font-weight: 600;
+}
+
+.input-group-text {
+    height: 100%;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    /* min-widths: 50%; */
+}
+
+.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: red
+}

@@ -1,0 +1,44 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.wd-assignments-buttons {
+    align-self: end;
+}
+
+.input-container {
+    width: 70%;
+}
+
+.label-col-left {
+    text-align: right;
+}
+
+
+.input-container .card-footer {
+    text-align: center;
+}
+
+.list-group-item {
+    border-bottom: 0px;
+}
+
+.input-container h5,
+h6 {
+    font-weight: 600;
+
+}
+
+.date-split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.last-container {
+    display: flex;
+    flex-direction: row;
+}
