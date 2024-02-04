@@ -18,14 +18,14 @@
 }
 
 .wd-modules>li {
-    border-bottom: 1px solid gray !important;
+    border-bottom: 1px solid rgb(196, 192, 192) !important;
     border-left: none !important;
 }
 
 .wd-modules-week-style {
     width: 100%;
-    border-top: 1px solid gray !important;
-    border-right: 1px solid gray !important;
+    border-top: 1px solid rgb(196, 192, 192) !important;
+    border-right: 1px solid rgb(196, 192, 192) !important;
     background-color: rgb(230, 230, 230);
     height: 60px;
     display: flex;

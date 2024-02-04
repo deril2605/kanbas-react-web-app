@@ -8,14 +8,14 @@
 
 .wd-modules>li {
     /* border: 1px solid gray !important; */
-    border-bottom: 1px solid gray !important;
+    border-bottom: 1px solid rgb(196, 192, 192) !important;
     border-left: none !important;
 }
 
 .wd-modules-week-style {
     width: 100%;
-    border-top: 1px solid gray !important;
-    border-right: 1px solid gray !important;
+    border-top: 1px solid rgb(196, 192, 192) !important;
+    border-right: 1px solid rgb(196, 192, 192) !important;
     background-color: rgb(230, 230, 230);
     height: 60px;
     display: flex;
@@ -24,7 +24,6 @@
 }
 
 .wd-modules-sub-week-style {
-    padding: 6px;
     width: 100%;
     /* border-left: 3px solid green !important; */
     /* border-right: 1px solid gray !important; */
@@ -37,42 +36,26 @@
     /* border: 1px solid gray !important; */
 }
 
-.wd-modules-week-style-left {
-    margin-left: 20px;
-}
 
-.total-button {
-    padding: 7px;
-}
+
 
 
 .wd-modules-heading-style {
-    border-left: 1px solid gray !important;
+    border-left: 1px solid rgb(196, 192, 192) !important;
 }
 
 .wd-modules-sub-heading-style {
-    border-left: 1px solid gray !important;
+    border-left: 1px solid rgb(196, 192, 192) !important;
 }
 
-.wd-modules-ellipsis {
-    margin-right: 50px;
-}
 
 .wd-modules-sub-heading-style .list-group {
-    border-top: 1px solid gray !important;
-}
-
-.list-group {
-    padding: 10px;
+    border-top: 1px solid rgb(196, 192, 192) !important;
 }
 
 
 
 
-.wd-modules>li {
-    /* margin-bottom: 20px; */
-    /* border-bottom: 0px; */
-}
 
 .wd-modules-flex-container-week {
     display: flex;
@@ -82,7 +65,6 @@
 }
 
 .wd-modules-buttons {
-    padding: 10px;
     align-self: end;
 }
 
