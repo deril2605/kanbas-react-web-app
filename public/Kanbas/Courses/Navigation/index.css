@@ -4,8 +4,8 @@
     padding: 0px;
     width: 125px;
     margin: 0px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
     margin-right: 10px;
 }
 
@@ -28,4 +28,9 @@
 .wd-navigation a {
     color: red;
     text-decoration: none;
+}
+
+.top-text {
+    font-size: small;
+    color: gray
 }

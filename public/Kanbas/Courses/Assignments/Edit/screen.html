@@ -12,215 +12,288 @@
 </head>
 
 <body>
-    <div class="d-flex">
-        <div class="d-none d-md-block">
-            <ul class="wd-kanbas-navigation">
-                <li><a href="http://northeastern.edu">N</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">
-                        <i class="far fa-user wd-kanbas-account-icon"></i>
-                        Account
-                    </a></li>
-                <li>
-                    <a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i><br>Dashboard</a>
-                </li>
-                <li class="wd-active">
-                    <a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i><br>Courses</a>
-                </li>
-                <li>
-                    <a href="/Kanbas/Calendar/index.html"><i class="fas fa-calendar-alt"></i><br>Calendar</a>
-                </li>
-                <li><a href="/Kanbas/Inbox/index.html"><i class="fas fa-print"></i><br>Inbox</a></li>
-                <li><a href="/Kanbas/History/index.html"><i class="far fa-clock"></i><br>History</a></li>
-                <li><a href="/Kanbas/Studio/index.html"><i class="fab fa-youtube-square"></i><br>Studio</a></li>
-                <li><a href="/Kanbas/Commons/index.html"><i class="far fa-arrow-alt-circle-right"></i><br>Commons</a>
-                </li>
-                <li><a href="/Kanbas/Help/index.html"><i class="far fa-question-circle"></i><br>Help</a></li>
-            </ul>
-        </div>
-        <div class="d-none d-md-block">
-            <ul class="wd-navigation">
-                <li>
-                    <a href="/Kanbas/Courses/Home/screen.html">Home</a>
-                </li>
-                <li>
-                    <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
-                </li>
-                <li><a href="http://piazza.com">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li class="wd-active">
-                    <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-                </li>
-                <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="/Kanbas/Courses/People/index.html">People</a></li>
-                <li><a href="/Kanbas/Courses/Panopto_Video/index.html">
-                        Panopto Video</a></li>
-                <li><a href="/Kanbas/Courses/Discussions/index.html">
-                        Discussions</a></li>
-                <li><a href="/Kanbas/Courses/Announcements/index.html">
-                        Announcements</a></li>
-                <li><a href="/Kanbas/Courses/Pages/index.html">
-                        Pages</a></li>
-                <li><a href="/Kanbas/Courses/Files/screen.html">
-                        Files</a></li>
-                <li><a href="/Kanbas/Courses/Rubrics/index.html">
-                        Rubrics</a></li>
-                <li><a href="/Kanbas/Courses/Outcomes/index.html">
-                        Outcomes</a></li>
-                <li><a href="/Kanbas/Courses/Collaborations/index.html">
-                        Collaborations</a></li>
-                <li><a href="/Kanbas/Courses/Syllabus/index.html">
-                        Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/Details/screen.html">
-                        Settings</a></li>
-            </ul>
-        </div>
-        <div class="main-container">
-
-            <div class="wd-assignments-buttons">
-                <i class="fa fa-check-circle text-success"></i>
-                <span style="color:green;margin-right:10px">Published</span>
-                <button type="button" class="btn btn-outline-secondary"> <i class="fa fa-ellipsis-v"></i> </button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1 d-none d-md-block ps-0 pe-0">
+                <ul class="wd-kanbas-navigation">
+                    <li><a href="http://northeastern.edu">N</a></li>
+                    <li><a href="/Kanbas/Account/Profile/screen.html">
+                            <i class="far fa-user wd-kanbas-account-icon"></i><br>
+                            Account
+                        </a></li>
+                    <li>
+                        <a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i><br>Dashboard</a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i><br>Courses</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Calendar/index.html"><i class="fas fa-calendar-alt"></i><br>Calendar</a>
+                    </li>
+                    <li><a href="/Kanbas/Inbox/index.html"><i class="fas fa-print"></i><br>Inbox</a></li>
+                    <li><a href="/Kanbas/History/index.html"><i class="far fa-clock"></i><br>History</a></li>
+                    <li><a href="/Kanbas/Studio/index.html"><i class="fab fa-youtube-square"></i><br>Studio</a></li>
+                    <li><a href="/Kanbas/Commons/index.html"><i
+                                class="far fa-arrow-alt-circle-right"></i><br>Commons</a>
+                    </li>
+                    <li><a href="/Kanbas/Help/index.html"><i class="far fa-question-circle"></i><br>Help</a></li>
+                </ul>
             </div>
-            <hr>
+            <div class="col-lg-11 col-md-11 col-sm-12 col-12">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-12">
+                        <div
+                            class="top-container align-items-center d-lg-flex d-none d-md-flex align-items-center col-12 mt-3">
+                            <div>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb mb-0" style="background-color: white;">
+                                        <li type="none" aria-current="page"><span style="color:rgba(0, 0, 0, 0.618); ">
+                                                <span style="color:rgb(207, 28, 28)"><i
+                                                        class="fas fa-bars fa-lg me-3 float-start"
+                                                        style="color:red"></i>
+                                                    CS4550.12631.202410 </span>>
+                                                Assignments</span>
 
-
-
-            <div>
-
-
-
-                <form id="edit-assignment">
-                    <div class="form-group w-100">
-                        <label for="text-fields-assignmentname">Assignment Name</label>
-                        <input type="string" class="form-control" id="text-fields-assignmentname"
-                            value="A1 - Intro/HTML">
-
-                    </div><br>
-
-                    <div class="form-group">
-                        <label for="assignment-description"></label>
-                        <textarea class="form-control" id="assignment-description"
-                            rows="3">The assignment describes how to do Web Dev stuff</textarea>
-                    </div><br>
-                    <div class="container input-container">
-                        <div class="row label-col-left">
-                            <div class="col-sm label-col">
+                                        </li>
+                                    </ol>
+                                </nav>
 
                             </div>
-                            <div class="col-sm label-col-right ">
-
+                            <div class=" me-3" style="align-self:flex-end">
+                                <button type="button" class="btn btn-outline-secondary ">
+                                    <i class="fas fa-glasses"></i> Student View</button>
                             </div>
                         </div>
+
+                        <div class="d-sm-block  d-md-none col-12 p-0">
+                            <header class="navbar navbar-dark bg-dark" style="width:100vw">
+                                <div class="menu-button ms-5">
+                                    <a href="/Kanbas/Navigation/nav_menu.html">
+                                        <i class="fas fa-bars fa-icon-left"></i>
+                                    </a>
+
+                                </div>
+                                <div style="color:white" class="navbar-content">
+                                    <p>CS4550.MERGED.126131</p>
+                                    <p>Modules</p>
+                                </div>
+
+                                <div class="me-4">
+                                    <i style="color:white" class="fas fa-glasses"></i>
+
+                                    <a href="/Kanbas/Navigation/view_menu.html">
+                                        <i style="color:white" class="fas fa-angle-down"></i>
+                                    </a>
+
+                                </div>
+                            </header>
+
+                        </div>
+
                     </div>
+                </div>
+                <div class="row me-2">
+                    <div class="col-lg-2 col-12 col-md-2 col-sm-1 ps-0 pe-0 d-none d-md-block">
+                        <ul class="wd-navigation">
+                            <li>
+                                <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                            </li>
+                            <li><a href="http://piazza.com">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li class="wd-active">
+                                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                            </li>
+                            <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
+                            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                            <li><a href="/Kanbas/Courses/People/index.html">People</a></li>
+                            <li><a href="/Kanbas/Courses/Panopto_Video/index.html">
+                                    Panopto Video</a></li>
+                            <li><a href="/Kanbas/Courses/Discussions/index.html">
+                                    Discussions</a></li>
+                            <li><a href="/Kanbas/Courses/Announcements/index.html">
+                                    Announcements</a></li>
+                            <li><a href="/Kanbas/Courses/Pages/index.html">
+                                    Pages</a></li>
+                            <li><a href="/Kanbas/Courses/Files/screen.html">
+                                    Files</a></li>
+                            <li><a href="/Kanbas/Courses/Rubrics/index.html">
+                                    Rubrics</a></li>
+                            <li><a href="/Kanbas/Courses/Outcomes/index.html">
+                                    Outcomes</a></li>
+                            <li><a href="/Kanbas/Courses/Collaborations/index.html">
+                                    Collaborations</a></li>
+                            <li><a href="/Kanbas/Courses/Syllabus/index.html">
+                                    Syllabus</a></li>
+                            <li><a href="/Kanbas/Courses/Settings/Details/screen.html">
+                                    Settings</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-10 col-12 col-md-10 col-sm-12 d-md-block ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="wd-assignments-buttons float-end">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <span style="color:green;margin-right:10px">Published</span>
+                                    <button type="button" class="btn btn-outline-secondary"> <i
+                                            class="fa fa-ellipsis-v"></i> </button>
+                                </div>
+                            </div>
 
-                    <div class="container input-container mb-5">
-                        <div class="row mb-3 mb-3">
-                            <div class="col-lg-3 col-md-3 col-3  label-col-left "><label for="points">Points</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-9"><input type="string" class="form-control" id="points"
-                                    value="100">
-                            </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3 col-md-3 col-3 label-col-left">
-                                <label for="assignment-group">Assignment Group</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-9"><select class="form-control" id="assignment-group">
-                                    <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-                                    <option value="QUIZZES">QUIZZES</option>
-                                </select></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3 col-md-3 col-3 label-col-left">
-                                <label for="display-grade-as">Display Grade as</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-9"><select class="form-control" id="display-grade-as">
-                                    <option value="PERCENTAGE">Percentage</option>
-                                    <option value="MARKS">Marks</option>
-                                </select></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3 col-md-3 col-3 label-col-left">
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div>
 
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-9">
-                                <input class="form-check-input" type="checkbox" value="" id="final-grade"> <label
-                                    class="form-check-label" for="final-grade">
-                                    Do not count this assignment towards the final grade
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3 col-md-3 col-3 label-col-left">
-                                <label for="display-grade-as">Assign</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-9">
-                                <div class="card">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item pb-0 pb-0">
-                                            <h5 class="m-0">Assign To</h5>
-                                        </li>
-                                        <li class="list-group-item pb-0"><button style="padding:5px" type="button"
-                                                class="btn btn-outline-secondary">Everyone</button>
-                                        </li>
-                                        <li class="list-group-item pb-0"></li>
-                                        <li class="list-group-item pb-0">
-                                            <h6 class="m-0">Due</h6>
-                                        </li>
-                                        <li class="list-group-item pb-0">
-                                            <input id="startDate" class="form-control" type="date" />
-                                        </li>
-                                        <li class="list-group-item pb-0 date-split">
-                                            <div class="container">
-                                                <div class="row mb-2">
-                                                    <div style="padding-left:0px" class="col-6">
-                                                        <h6 class="m-0">Available from</h6>
-                                                    </div>
-                                                    <div style="padding-left:0px" class="col-6">
-                                                        <h6 class="m-0">Until</h6>
-                                                    </div>
+
+
+                                    <form id="edit-assignment">
+                                        <div class="form-group w-100">
+                                            <label for="text-fields-assignmentname">Assignment Name</label>
+                                            <input type="string" class="form-control" id="text-fields-assignmentname"
+                                                value="A1 - Intro/HTML">
+
+                                        </div><br>
+
+                                        <div class="form-group">
+                                            <label for="assignment-description"></label>
+                                            <textarea class="form-control" id="assignment-description"
+                                                rows="3">The assignment describes how to do Web Dev stuff</textarea>
+                                        </div><br>
+                                        <div class="container input-container">
+                                            <div class="row label-col-left">
+                                                <div class="col-sm label-col">
+
                                                 </div>
-                                                <div class="row mb-2">
-                                                    <div style="padding-left:0px" class="col-6">
-                                                        <input id="startDate" class="form-control" type="date" />
-                                                    </div>
-                                                    <div style="padding-left:0px" class="col-6">
-                                                        <input id="startDate" class="form-control" type="date" />
+                                                <div class="col-sm label-col-right ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="container input-container mb-5">
+                                            <div class="row mb-3 mb-3">
+                                                <div class="col-lg-3 col-md-3 col-3  label-col-left "><label
+                                                        for="points">Points</label>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9"><input type="string"
+                                                        class="form-control" id="points" value="100">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3 col-md-3 col-3 label-col-left">
+                                                    <label for="assignment-group">Assignment Group</label>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9"><select class="form-control"
+                                                        id="assignment-group">
+                                                        <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+                                                        <option value="QUIZZES">QUIZZES</option>
+                                                    </select></div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3 col-md-3 col-3 label-col-left">
+                                                    <label for="display-grade-as">Display Grade as</label>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9"><select class="form-control"
+                                                        id="display-grade-as">
+                                                        <option value="PERCENTAGE">Percentage</option>
+                                                        <option value="MARKS">Marks</option>
+                                                    </select></div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3 col-md-3 col-3 label-col-left">
+
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="final-grade"> <label class="form-check-label"
+                                                        for="final-grade">
+                                                        Do not count this assignment towards the final grade
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3 col-md-3 col-3 label-col-left">
+                                                    <label for="display-grade-as">Assign</label>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9">
+                                                    <div class="card">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item pb-0 pb-0">
+                                                                <h5 class="m-0">Assign To</h5>
+                                                            </li>
+                                                            <li class="list-group-item pb-0"><button style="padding:5px"
+                                                                    type="button"
+                                                                    class="btn btn-outline-secondary">Everyone</button>
+                                                            </li>
+                                                            <li class="list-group-item pb-0"></li>
+                                                            <li class="list-group-item pb-0">
+                                                                <h6 class="m-0">Due</h6>
+                                                            </li>
+                                                            <li class="list-group-item pb-0">
+                                                                <input id="startDate" class="form-control"
+                                                                    type="date" />
+                                                            </li>
+                                                            <li class="list-group-item pb-0 date-split">
+                                                                <div class="container">
+                                                                    <div class="row mb-2">
+                                                                        <div style="padding-left:0px" class="col-6">
+                                                                            <h6 class="m-0">Available from</h6>
+                                                                        </div>
+                                                                        <div style="padding-left:0px" class="col-6">
+                                                                            <h6 class="m-0">Until</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row mb-2">
+                                                                        <div style="padding-left:0px" class="col-6">
+                                                                            <input id="startDate" class="form-control"
+                                                                                type="date" />
+                                                                        </div>
+                                                                        <div style="padding-left:0px" class="col-6">
+                                                                            <input id="startDate" class="form-control"
+                                                                                type="date" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="card-footer">
+                                                            <i style="color:rgb(196, 192, 192)" class="fas fa-plus"></i>
+                                                            Add
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
-                                    <div class="card-footer">
-                                        <i style="color:rgb(196, 192, 192)" class="fas fa-plus"></i> Add
-                                    </div>
+                                        </div>
+                                        <hr>
+
+
+
+                                        <div class="flex-fill">
+                                            <div class="float-start">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="content-change"><label class="form-check-label"
+                                                    for="content-change" style="margin-left:5px">
+                                                    Notify users that this content has changed
+                                                </label>
+                                            </div>
+                                            <div class="float-end">
+                                                <button type="button" class="btn btn-outline-secondary ">
+                                                    Cancel</button>
+                                                <button type="button" class="btn btn-danger ">Save</button>
+                                            </div>
+                                        </div>
+
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr>
-
-
-
-                    <div class="flex-fill">
-                        <div class="float-start">
-                            <input class="form-check-input" type="checkbox" value="" id="content-change"><label
-                                class="form-check-label" for="content-change" style="margin-left:5px">
-                                Notify users that this content has changed
-                            </label>
-                        </div>
-                        <div class="float-end">
-                            <button type="button" class="btn btn-outline-secondary ">
-                                Cancel</button>
-                            <button type="button" class="btn btn-danger ">Save</button>
-                        </div>
-                    </div>
-
-
-                </form>
+                </div>
             </div>
-
         </div>
     </div>
 

@@ -3,7 +3,8 @@
     list-style: none;
     padding: 0px;
     margin: 0px;
-    width: 80px;
+    width: 95%;
+    /* width: 80px; */
     height: 100%;
 }
 
@@ -40,6 +41,42 @@
     color: white !important;
 }
 
-.d-flex {
+
+
+.container-fullwidth {
     min-height: 100vh;
+}
+
+.top-container {
+    /* display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    /* flex-grow: 1; */
+    /* margin-left: 50px; */
+}
+
+.list-view-menu a {
+    text-decoration: none !important;
+    color: red !important
+}
+
+.navbar-content {
+    text-align: center;
+}
+
+.navigation-small-box i {
+    color: red
+}
+
+.navigation-small-box a {
+    color: red
+}
+
+
+
+.list-view-menu i {
+    color: red;
 }
