@@ -37,3 +37,11 @@
     margin-left: 30px;
     margin-top: 20px;
 }
+
+.small-button {
+    width: 5%;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
