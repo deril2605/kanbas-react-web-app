@@ -8,12 +8,25 @@
     height: 100%;
 }
 
+.neu_logo_nav {
+    width: 90%;
+}
+
 .wd-kanbas-navigation li {
     padding: 10px;
     margin-bottom: 9px;
     font-size: 0.8em;
     text-align: center;
 }
+
+/* .wd-kanbas-navigation img {
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 9px;
+    font-size: 0.8em;
+    width: 10%;
+} */
 
 
 
