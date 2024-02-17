@@ -10,7 +10,7 @@ function Dashboard() {
     return (
         <div className="">
             <div className="main-dashboard-container">
-                <div className="p-4">
+                <div className="p-2">
                     <div className="d-flex justify-content-between">
                         <div className="d-none d-md-block">
                             <h1>Dashboard</h1>
