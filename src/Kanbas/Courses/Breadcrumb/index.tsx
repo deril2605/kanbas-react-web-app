@@ -33,7 +33,7 @@ function Breadcrumb() {
                     </nav >
                 </div>
                 <div>
-                    <button type="button" className="btn btn-outline-secondary me-5">
+                    <button type="button" className="btn btn-outline-secondary me-3">
                         <FaGlasses />  Student View</button>
                 </div>
             </div>
