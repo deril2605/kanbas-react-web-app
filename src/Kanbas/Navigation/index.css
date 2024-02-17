@@ -1,0 +1,96 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    /* width: 93%;  */
+    /* use when implementing all screens */
+    width: 80px;
+    height: 100%;
+}
+
+.neu_logo_nav {
+    width: 90%;
+}
+
+.wd-kanbas-navigation li {
+    padding: 10px;
+    margin-bottom: 9px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+/* .wd-kanbas-navigation img {
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 9px;
+    font-size: 0.8em;
+    width: 10%;
+} */
+
+
+
+
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+
+.wd-kanbas-navigation li.wd-active a {
+    color: #b52828;
+}
+
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.wd-kanbas-account-icon {
+    color: white !important;
+}
+
+
+
+.container-fullwidth {
+    min-height: 100vh;
+}
+
+.top-container {
+    /* display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    /* flex-grow: 1; */
+    /* margin-left: 50px; */
+}
+
+.list-view-menu a {
+    text-decoration: none !important;
+    color: red !important
+}
+
+.navbar-content {
+    text-align: center;
+}
+
+.navigation-small-box i {
+    color: red
+}
+
+.navigation-small-box a {
+    color: red
+}
+
+
+
+.list-view-menu i {
+    color: red;
+}

@@ -1,0 +1,131 @@
+.wd-modules,
+.wd-modules * {
+    border-radius: 0%;
+    /* border: none; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-modules>li {
+    /* border: 1px solid gray !important; */
+    border-bottom: 1px solid rgb(196, 192, 192) !important;
+    border-left: none !important;
+}
+
+.wd-modules-week-style {
+    width: 100%;
+    border-top: 1px solid rgb(196, 192, 192) !important;
+    border-right: 1px solid rgb(196, 192, 192) !important;
+    background-color: rgb(230, 230, 230);
+    height: 60px;
+    background-color: rgb(208, 208, 208) !important;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.wd-modules-sub-week-style {
+    width: 100%;
+    /* border-left: 3px solid green !important; */
+    /* border-right: 1px solid gray !important; */
+    /* border-bottom: 1px solid gray !important; */
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid gray !important; */
+}
+
+
+
+
+
+.wd-modules-heading-style {
+    border-left: 1px solid rgb(196, 192, 192) !important;
+}
+
+.wd-modules-sub-heading-style {
+    border-left: 1px solid rgb(196, 192, 192) !important;
+}
+
+
+.wd-modules-sub-heading-style .list-group {
+    border-top: 1px solid rgb(196, 192, 192) !important;
+}
+
+
+
+
+.wd-modules-flex-container-week {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 30px;
+}
+
+.wd-modules-buttons {
+    align-self: end;
+}
+
+.wd-modules-data {
+    flex-grow: 1;
+}
+
+.wd-modules-flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-modules-flex-container-other {
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+.wd-modules-buttons-canvas {
+    padding-left: 0px;
+}
+
+.wd-modules-coming-up {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.wd-modules-buttons-canvas button {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.wd-modules-buttons-coming-up {
+    padding-left: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: red
+}
+
+.wd-modules-buttons-coming-up li {
+    margin-bottom: 10px;
+}
+
+.navbar-content {
+    text-align: center;
+}
+
+.col {
+    padding: 0px;
+}
+
+.wd-modules-buttons .btn {
+    margin-left: 5px;
+}
+
+.main-drop-down {
+    background-color: rgb(208, 208, 208);
+
+}
