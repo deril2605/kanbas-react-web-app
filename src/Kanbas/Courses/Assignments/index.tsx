@@ -9,8 +9,8 @@ function Assignments() {
     const assignmentList = assignments.filter(
         (assignment) => assignment.course === courseId);
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20, marginTop: 20 }}>
+        <div className="d-flex flex-column ms-3">
+            <div className="d-flex justify-content-between ">
                 <div className="w-25 float-start">
                     <input type="string" className="form-control " placeholder="Search for Assignments" />
                 </div>
@@ -25,7 +25,7 @@ function Assignments() {
 
             </div>
             <hr />
-            <ul className="list-group wd-modules">
+            <ul className="list-group wd-modules ">
                 <li className="list-group-item mt-3 me-3 p-0">
                     <div className="wd-modules-week-style">
                         <div>

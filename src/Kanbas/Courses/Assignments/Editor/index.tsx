@@ -16,7 +16,7 @@ function AssignmentEditor() {
     };
     return (
         <div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="d-flex flex-column ms-3 me-2">
                 <div>
                     <div className="float-end me-3 mt-3 ">
                         <FaRegCheckCircle className="fs-5" style={{ color: 'green' }} /> <span style={{ color: 'green' }}><strong>Published</strong></span>
