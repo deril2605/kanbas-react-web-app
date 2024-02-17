@@ -8,7 +8,7 @@ function Home() {
         <div>
             <h2>Home</h2>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <div style={{ width: '80%' }}>
+                <div className="col-lg-7 col-12 col-md-10 col-sm-12 col-xs-12 d-md-block mt-3" style={{ width: '80%' }}>
                     <ModuleList />
                 </div>
                 <div style={{ width: '20%' }}>
