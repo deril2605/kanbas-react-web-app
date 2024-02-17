@@ -19,17 +19,17 @@ function KanbasNavigation() {
     ];
     const { pathname } = useLocation();
     return (
-        <div className="col-lg-1 col-md-1 col-sm-1 d-none d-md-block ps-0 pe-0">
-            <ul className="wd-kanbas-navigation">
-                <li><a href="http://northeastern.edu"><img className="neu_logo_nav" src="/images/neu_nav.png" /></a>
+
+        <ul className="wd-kanbas-navigation">
+            <li><a href="http://northeastern.edu"><img className="neu_logo_nav" src="/images/neu_nav.png" /></a>
+            </li>
+            {links.map((link, index) => (
+                <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
+                    {link.label == "Courses" ? <Link to={`/Kanbas/Dashboard`}> {link.icon} {link.label} </Link> : <Link to={`/Kanbas/${link.label}`}> {link.icon} {link.label} </Link>}
                 </li>
-                {links.map((link, index) => (
-                    <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
-                        {link.label == "Courses" ? <Link to={`/Kanbas/Dashboard`}> {link.icon} {link.label} </Link> : <Link to={`/Kanbas/${link.label}`}> {link.icon} {link.label} </Link>}
-                    </li>
-                ))}
-            </ul>
-        </div >
+            ))}
+        </ul>
+
     );
 }
 export default KanbasNavigation;

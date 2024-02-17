@@ -1,7 +1,10 @@
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { courses } from "../../Database";
-import { FaGlasses } from "react-icons/fa";
+import { FaGlasses, FaAngleDown, FaBars } from "react-icons/fa";
+import NavMenu from "../../Navigation/nav_menu";
+import BreadcrumbNav from "./breadcrumb_nav";
+
 
 
 function Breadcrumb() {
@@ -16,8 +19,8 @@ function Breadcrumb() {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
     return (
-        <div style={{ marginLeft: 13, marginTop: 8 }}>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+        <div >
+            <div className="d-md-flex d-none col-12 flex-row justify-content-between mt-md-3">
                 <div>
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb mb-0 fs-5" style={{ backgroundColor: "white" }}>
@@ -34,7 +37,8 @@ function Breadcrumb() {
                         <FaGlasses />  Student View</button>
                 </div>
             </div>
-            <hr />
+            <hr className="d-lg-flex d-none d-md-flex" />
+            {/* <BreadcrumbNav /> */}
         </div>
     );
 }

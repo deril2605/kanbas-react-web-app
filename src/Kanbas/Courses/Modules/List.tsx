@@ -24,7 +24,7 @@ function ModuleList() {
                 <button type="button" className="btn btn-outline-secondary"> <FaEllipsisV /> </button>
             </div>
 
-            <ul className="list-group wd-modules" style={{ marginBottom: 20, marginRight: 20 }}>
+            <ul className="list-group wd-modules ms-2 me-2">
                 {modulesList.map((module: any) => (
                     <li
                         className="list-group-item mt-3 p-0"

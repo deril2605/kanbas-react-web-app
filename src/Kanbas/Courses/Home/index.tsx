@@ -6,12 +6,11 @@ import { GrTarget } from "react-icons/gr";
 function Home() {
     return (
         <div>
-            <h2>Home</h2>
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <div className="col-lg-7 col-12 col-md-10 col-sm-12 col-xs-12 d-md-block mt-3" style={{ width: '80%' }}>
+            <div className="d-flex">
+                <div className="col-lg-8 col-12 col-md-12 col-sm-12 col-xs-12 d-md-block mt-3">
                     <ModuleList />
                 </div>
-                <div style={{ width: '20%' }}>
+                <div className="col-lg-4 col-12 d-md-none d-none d-sm-none d-lg-block ps-3">
                     <h3>Course Status</h3>
                     <div className="d-flex" style={{ marginBottom: 15 }}>
                         <button type="button" className="btn btn-outline-secondary me-1">Unpublish</button>
@@ -71,7 +70,7 @@ function Home() {
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 }
 export default Home;
