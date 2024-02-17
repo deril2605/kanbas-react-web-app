@@ -8,7 +8,7 @@ import BreadcrumbNav from "../Courses/Breadcrumb/breadcrumb_nav";
 function ViewMenu() {
     return (
         <div>
-            <BreadcrumbNav />
+            {/* <BreadcrumbNav /> */}
         </div>
     );
 }

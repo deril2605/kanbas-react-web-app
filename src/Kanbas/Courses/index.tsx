@@ -10,6 +10,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import ViewMenu from "../Navigation/view_menu";
+import BreadcrumbNav from "./Breadcrumb/breadcrumb_nav";
 
 function Courses() {
     const { courseId } = useParams();
@@ -19,6 +20,9 @@ function Courses() {
             <div className="col-12">
                 <div className="col-lg-12 col-sm-12 col-md-12 col-12 ps-md-3 pe-md-3 ps-0 pe-0">
                     <Breadcrumb />
+                </div>
+                <div className="d-sm-block d-md-none col-12 p-0">
+                    <BreadcrumbNav />
                 </div>
                 <div className="d-flex justify-content-around ">
                     <div className="col-lg-2 col-md-2  col-sm-1 ps-0 pe-0 d-none d-md-block">
