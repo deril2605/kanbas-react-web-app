@@ -28,7 +28,7 @@ function Courses() {
                     <div className="col-lg-2 col-md-2  col-sm-1 ps-0 pe-0 d-none d-md-block">
                         <CourseNavigation />
                     </div>
-                    <div className="col-sm-12 col-md-10 d-md-block"> {/* CHECK IF HOME BREAKS */}
+                    <div id="wrapper" className="col-sm-12 col-md-10 d-md-block">
                         <div>
                             <div
                                 // className="overflow-y-scroll position-fixed bottom-0 end-0"
