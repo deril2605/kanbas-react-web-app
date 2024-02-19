@@ -35,8 +35,8 @@ h6 {
 }
 
 a {
-    text-decoration: none;
-    color: red
+    text-decoration: none !important;
+    color: red !important;
 }
 
 .input-button {
