@@ -44,19 +44,19 @@ function Home() {
 
                     <div className="wd-modules-coming-up">
                         <h6 style={{ marginBottom: 0 }}>Coming Up</h6>
-                        <a className="me-3" href="#"><FaCalendarAlt className="pe-1 fs-5" /> View Calendar</a>
+                        <a className="me-3 red-anchor" href="#"><FaCalendarAlt className="pe-1 fs-5" /> View Calendar</a>
                     </div>
                     <hr />
 
                     <ul className="wd-modules-buttons-coming-up">
-                        <li className="list-group-item"><a href="#"><FaRegCalendarCheck className="pe-1 fs-6" />
+                        <li className="list-group-item "><a className="red-anchor" href="#"><FaRegCalendarCheck className="pe-1 fs-6 " />
                             Lecture</a><br />
                             <div style={{ fontSize: 'x-small', marginLeft: 18 }}>
                                 <div>CS1234.12631.20241010</div>
                                 <div>Sep 11 11:45am</div>
                             </div>
                         </li>
-                        <li className="list-group-item"><a href="#"><FaRegCalendarCheck className="pe-1 fs-6" />
+                        <li className="list-group-item"><a className="red-anchor" href="#"><FaRegCalendarCheck className="pe-1 fs-6" />
                             CS5610 06 SP24 Lecture</a><br />
                             <div style={{ fontSize: 'x-small', marginLeft: 18 }}>
                                 <div>CS1234.12631.20241010</div>
@@ -64,7 +64,7 @@ function Home() {
                             </div>
                         </li>
 
-                        <a href="#">12 more in the next week</a>
+                        <a className="red-anchor" href="#">12 more in the next week</a>
                     </ul>
 
                 </div>
