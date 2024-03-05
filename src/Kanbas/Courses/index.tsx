@@ -12,7 +12,18 @@ import Grades from "./Grades";
 import ViewMenu from "../Navigation/view_menu";
 import BreadcrumbNav from "./Breadcrumb/breadcrumb_nav";
 
-function Courses() {
+type Course = {
+    _id: string;
+    name: string;
+    number: string;
+    details: string;
+    term: string;
+    startDate: string;
+    endDate: string;
+    image: string;
+};
+
+function Courses({ courses }: { courses: Course[] }) {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
     return (

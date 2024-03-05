@@ -1,26 +1,65 @@
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
+import { courses as db_courses } from "./Database";
 import Courses from "./Courses";
-import NavMenu from "./Navigation/nav_menu";
-import ViewMenu from "./Navigation/view_menu";
+import { useState } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas() {
+    const [courses, setCourses] = useState(db_courses);
+    const [course, setCourse] = useState({
+        _id: "0", name: "New Course", number: "New Number", details: "New.Course", term: "20240101_Spring_2024_Full",
+        startDate: "2023-09-10", endDate: "2023-12-15",
+        image: "newcourse.jpeg"
+    });
+
+    const addNewCourse = () => {
+        const newCourse = {
+            ...course,
+            _id: new Date().getTime().toString()
+        };
+        setCourses([...courses, { ...course, ...newCourse }]);
+    };
+
+    const deleteCourse = (courseId: string) => {
+        setCourses(courses.filter((course) => course._id !== courseId));
+    };
+
+    const updateCourse = () => {
+        setCourses(
+            courses.map((c) => {
+                if (c._id === course._id) {
+                    return course;
+                } else {
+                    return c;
+                }
+            })
+        );
+    };
     return (
-        <div className="d-flex">
-            <div className="col-lg-1 col-md-1 col-sm-1 d-none d-md-block ps-0 pe-0">
-                <KanbasNavigation />
+        <Provider store={store}>
+            <div className="d-flex">
+                <div className="col-lg-1 col-md-1 col-sm-1 d-none d-md-block ps-0 pe-0">
+                    <KanbasNavigation />
+                </div>
+                <div style={{ flexGrow: 1 }}>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="Dashboard" />} />
+                        <Route path="Account" element={<h1>Account</h1>} />
+                        <Route path="Dashboard" element={<Dashboard courses={courses}
+                            course={course}
+                            setCourse={setCourse}
+                            addNewCourse={addNewCourse}
+                            deleteCourse={deleteCourse}
+                            updateCourse={updateCourse} />} />
+                        <Route path="Courses/*" element={<h1>Courses</h1>} />
+                        <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+                    </Routes>
+                </div>
             </div>
-            <div style={{ flexGrow: 1 }}>
-                <Routes>
-                    <Route path="/" element={<Navigate to="Dashboard" />} />
-                    <Route path="Account" element={<h1>Account</h1>} />
-                    <Route path="Dashboard" element={<Dashboard />} />
-                    <Route path="Courses/*" element={<h1>Courses</h1>} />
-                    <Route path="Courses/:courseId/*" element={<Courses />} />
-                </Routes>
-            </div>
-        </div>
+        </Provider>
     );
 }
 
