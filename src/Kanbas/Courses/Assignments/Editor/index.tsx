@@ -53,7 +53,7 @@ function AssignmentEditor() {
                     <textarea rows={4} className="form-control" onChange={(e) =>
                         dispatch(setAssignment({ ...assignment, description: e.target.value }))
                     }
-                    >{assignment?.description}</textarea>
+                        value={assignment?.description} />
                     <div className="container mt-3 mb-2 d-flex justify-content-end" >
                         <div className="row mb-3 mb-3 w-75">
                             <div className="text-end col-lg-3 col-md-3 col-3"><label
