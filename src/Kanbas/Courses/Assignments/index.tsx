@@ -3,10 +3,15 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPlus, FaCaretDown, FaEdit }
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../store";
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignmentList = assignments.filter(
+
+    const assignmentAllList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+    const assignmentList = assignmentAllList.filter(
         (assignment) => assignment.course === courseId);
     return (
         <div className="d-flex flex-column ms-3">
@@ -17,8 +22,9 @@ function Assignments() {
                 <div className="float-end me-3">
                     <button type="button" className="btn btn-outline-secondary "><FaPlus className="me-1" style={{ color: 'gray' }} />
                         Group</button>
-                    <button type="button" className="btn btn-danger ms-1"><FaPlus className="me-1" style={{ color: 'white' }} />
-                        Assignment</button>
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/new`}><button type="button" className="btn btn-danger ms-1"><FaPlus className="me-1" style={{ color: 'white' }} />
+                        Assignment</button></Link>
+
                     <button type="button" className="btn btn-outline-secondary ms-1"> <FaEllipsisV />
                     </button>
                 </div>
