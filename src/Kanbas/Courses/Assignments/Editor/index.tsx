@@ -1,37 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-// import { assignments } from "../../../Database";
 import { FaEllipsisV, FaRegCheckCircle } from "react-icons/fa";
 import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../../store";
-import { addAssignment, setAssignment } from "../assignmentsReducer";
+import { addAssignment, setAssignment, updateAssignment, initialState } from "../assignmentsReducer";
 
 
 function AssignmentEditor() {
-    const { assignmentId } = useParams();
-    console.log(assignmentId)
-    const { courseId } = useParams();
+    const { assignmentId, courseId } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const handleSave = () => {
-        dispatch(addAssignment({ ...assignment, course: courseId }))
+        if (assignment && assignment._id) {
+            dispatch(updateAssignment({ ...assignment, course: courseId }));
+        } else {
+            dispatch(addAssignment({ ...assignment, course: courseId }));
+        }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
-    var assignment: { _id: string; title: string; course: string; description: string; points: number; available_from: string; due: string; until: string; } | undefined;
-    const newAssignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
-    const dispatch = useDispatch();
+
+    const defaultAssignment = initialState.assignment
+
+
     const assignmentAllList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
-    const assignments = assignmentAllList.filter(
-        (assignment) => assignment.course === courseId);
-    if (assignmentId == "new") {
-        assignment = newAssignment;
-    } else {
-        assignment = assignments.find(
-            (assignment) => assignment._id === assignmentId);
-        console.log(assignment)
-    }
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment);
 
+    useEffect(() => {
+        if (assignmentId !== "new") {
+            const editingAssignment = assignmentAllList.find(assignment => assignment._id === assignmentId);
+            if (editingAssignment) {
+                dispatch(setAssignment(editingAssignment));
+            }
+        } else {
+            dispatch(setAssignment(defaultAssignment));
+        }
+    }, [assignmentId, assignmentAllList, dispatch]);
 
     return (
         <div>
@@ -122,8 +129,6 @@ function AssignmentEditor() {
                     </Link>
                 </div>
             </div>
-
-
         </div>
     );
 }

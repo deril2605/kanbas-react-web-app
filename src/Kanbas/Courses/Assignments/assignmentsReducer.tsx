@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { assignments } from "../../Database";
 
 
-const initialState = {
+export const initialState = {
     assignments: assignments,
-    assignment: { title: "New Assignment", description: "New Assignment Description" }
+    assignment: { title: "New Assignment", description: "New Assignment Description", points: "", due: "", until: "", available_from: "" }
 };
 
 
