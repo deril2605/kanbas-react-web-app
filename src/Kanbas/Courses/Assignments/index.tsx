@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPlus, FaCaretDown, FaEdit } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
 import "./index.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../store";
+import { MdDelete } from "react-icons/md";
+import { Button, Modal } from "react-bootstrap";
+import { deleteAssignment } from "./assignmentsReducer";
+
 
 function Assignments() {
     const { courseId } = useParams();
+    const dispatch = useDispatch();
+
+    const [show, setShow] = useState(false);
+    const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
+    const [selectedAssignmentTitle, setSelectedAssignmentTitle] = useState("");
+
+    const handleClose = () => {
+        setShow(false);
+    }
+    const handleShow = (assignmentId: React.SetStateAction<null>, assignmentTitle: React.SetStateAction<string>) => {
+        setShow(true);
+        setSelectedAssignmentId(assignmentId);
+        setSelectedAssignmentTitle(assignmentTitle);
+    };
 
     const assignmentAllList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
@@ -48,14 +65,6 @@ function Assignments() {
                     <ul className="list-group">
                         {assignmentList.map((assignment) => (
                             <li className="list-group-item rounded-0 wd-modules-sub-week-style ps-0" style={{ borderLeft: "3px solid green" }}>
-                                {/* <FaEllipsisV className="me-2" />
-                                <FaEdit className="me-2 fs-5" style={{ color: 'green' }} />
-                                <Link
-                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
-
-                                <span className="float-end">
-                                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span> */}
-
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <div>
                                         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -79,16 +88,36 @@ function Assignments() {
                                     <div >
                                         <span className="float-end">
                                             <FaCheckCircle className="text-success me-3" />
+                                            <MdDelete className="fs-5" onClick={() => handleShow(assignment._id, assignment.title)} />
                                             <FaEllipsisV className="ms-2 " />
                                         </span>
                                     </div>
                                 </div>
 
-                            </li>))}
+
+                            </li>
+                        ))}
                     </ul>
                 </li>
-            </ul>
-        </div>
+            </ul >
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Delete Assignment</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Are you sure you want to delete this assignment,<strong> {selectedAssignmentTitle}</strong>?</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => {
+                        handleClose();
+                        dispatch(deleteAssignment(selectedAssignmentId));
+                    }}>
+                        Delete Assignment
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </div >
     );
 }
 export default Assignments;

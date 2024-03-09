@@ -23,7 +23,6 @@ function AssignmentEditor() {
 
     const defaultAssignment = initialState.assignment
 
-
     const assignmentAllList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
     const assignment = useSelector((state: KanbasState) =>
