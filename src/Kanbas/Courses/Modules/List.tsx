@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlus, FaCaretRight, FaCaretDown } from "react-icons/fa";
@@ -11,12 +11,38 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules
 } from "./modulesReducer";
 import { KanbasState } from "../../store";
-
+import * as client from "./client";
 
 function ModuleList() {
     const { courseId } = useParams();
+    useEffect(() => {
+        client.findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
+
+    const handleAddModule = () => {
+        client.createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId: string) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
+
     const [selectedModule, setSelectedModule] = useState(null);
     // const [modulesList, setModuleList] = useState(modules);
 
@@ -58,8 +84,8 @@ function ModuleList() {
 
             </div>
             <div className="d-flex">
-                <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} className="mt-3 btn btn-danger me-3 w-25">Add Module</button>
-                <button className="mt-3 btn btn-danger me-3 w-25" onClick={() => dispatch(updateModule(module))}> Update
+                <button onClick={handleAddModule} className="mt-3 btn btn-danger me-3 w-25">Add Module</button>
+                <button className="mt-3 btn btn-danger me-3 w-25" onClick={handleUpdateModule}> Update
                 </button>
             </div>
 
@@ -78,7 +104,7 @@ function ModuleList() {
                                     </div>
                                     <span>
                                         <FaEdit onClick={() => dispatch(setModule(module))} className="ms-4 " />
-                                        <MdDeleteForever className="ms-2 fs-5" onClick={() => dispatch(deleteModule(module._id))} />
+                                        <MdDeleteForever className="ms-2 fs-5" onClick={() => handleDeleteModule(module._id)} />
                                         <FaCheckCircle className="text-success ms-2" /><FaCaretDown />
                                         <FaPlus className="ms-4" style={{ color: 'gray' }} />
                                         <FaEllipsisV className="ms-4 me-3" />

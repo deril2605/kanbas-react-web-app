@@ -1,6 +1,8 @@
 import { courses } from "../../Kanbas/Database";
 import { useParams, Navigate, Route, Routes } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./index.css"
 import CourseNavigation from "./Navigation";
 import Breadcrumb from "./Breadcrumb";
@@ -23,9 +25,22 @@ type Course = {
     image: string;
 };
 
-function Courses({ courses }: { courses: Course[] }) {
+function Courses() {
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const COURSES_API = "http://localhost:4000/api/courses";
+    const [course, setCourse] = useState<Course>();
+    const findCourseById = async (courseId?: string) => {
+        const response = await axios.get(
+            `${COURSES_API}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
+
+    // const course = courses.find((course) => course._id === courseId);
     return (
         <div className="container-fluid ps-0 pe-0">
             <div className="col-12">
