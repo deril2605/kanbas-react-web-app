@@ -5,7 +5,7 @@ import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../../store";
 import { addAssignment, setAssignment, updateAssignment, initialState } from "../assignmentsReducer";
-import { createAssignment } from "../client";
+import * as client from "../client";
 
 
 function AssignmentEditor() {
@@ -15,7 +15,7 @@ function AssignmentEditor() {
 
     const handleSave = () => {
         if (assignment && assignment._id) {
-            dispatch(updateAssignment({ ...assignment, course: courseId }));
+            handleUpdateAssignment();
         } else {
             handleAddAssignment();
         }
@@ -23,10 +23,16 @@ function AssignmentEditor() {
     };
 
     const handleAddAssignment = () => {
-        createAssignment(courseId, { ...assignment, course: courseId }).then((assignment) => {
+        client.createAssignment(courseId, { ...assignment, course: courseId }).then((assignment) => {
             dispatch(addAssignment(assignment));
         });
     };
+
+    const handleUpdateAssignment = async () => {
+        const status = await client.updateAssignment({ ...assignment, course: courseId });
+        dispatch(updateAssignment(assignment));
+    };
+
 
 
     const defaultAssignment = initialState.assignment
