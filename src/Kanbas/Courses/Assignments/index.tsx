@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPlus, FaCaretDown, FaEdit } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
@@ -6,11 +6,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../store";
 import { MdDelete } from "react-icons/md";
 import { Button, Modal } from "react-bootstrap";
-import { deleteAssignment } from "./assignmentsReducer";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 
 
 function Assignments() {
     const { courseId } = useParams();
+    useEffect(() => {
+        client.findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
+
+    const handleDeleteAssignment = (assignmentId: string | null) => {
+        if (assignmentId == null) {
+            console.error('assignmentId is null');
+            return;
+        }
+        client.deleteAssignment(assignmentId).then((assignment) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    };
+
+
     const dispatch = useDispatch();
 
     const [show, setShow] = useState(false);
@@ -111,7 +130,7 @@ function Assignments() {
                     </Button>
                     <Button variant="primary" onClick={() => {
                         handleClose();
-                        dispatch(deleteAssignment(selectedAssignmentId));
+                        handleDeleteAssignment(selectedAssignmentId)
                     }}>
                         Delete Assignment
                     </Button>
